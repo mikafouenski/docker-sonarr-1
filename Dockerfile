@@ -45,7 +45,7 @@ RUN \
 	/var/lib/apt/lists/* \
 	/var/tmp/*
 
-COPY --from=0 /Sonarr /opt/NzbDrone
+COPY --from=0 /Sonarr/_output /opt/NzbDrone
 RUN find "/opt/NzbDrone" -type d -exec chmod 755 {} \; && \
     find "/opt/NzbDrone" -type f -exec chmod 644 {} \; && \
     find "/opt/NzbDrone" -name \*.exe -type f -exec chmod 755 {} \;
