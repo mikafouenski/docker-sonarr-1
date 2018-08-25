@@ -1,0 +1,16 @@
+--- Sonarr/src/NzbDrone.Core/DecisionEngine/DownloadDecisionComparer.cs	2018-08-25 19:52:49.890737231 +0000
++++ Sonarr/src/NzbDrone.Core/DecisionEngine/DownloadDecisionComparer.cs1	2018-08-25 19:52:28.550678115 +0000
+@@ -23,11 +23,11 @@
+         {
+             var comparers = new List<CompareDelegate>
+             {
++                ComparePeersIfTorrent,
+                 CompareQuality,
+                 CompareProtocol,
+                 CompareEpisodeCount,
+                 CompareEpisodeNumber,
+-                ComparePeersIfTorrent,
+                 CompareAgeIfUsenet,
+                 CompareSize
+             };
+
